@@ -4,7 +4,10 @@ This repository contains a minimal Python example that displays video
 from a USB camera which delivers MJPEG frames. The stream is decoded and
 shown using a GStreamer pipeline and OpenCV. It is intended for use on
 NVIDIA Jetson devices but should work on any Linux system with GStreamer
-and a supported camera.
+and a supported camera. If the GStreamer pipeline cannot be opened or
+produces an internal data stream error while running, the script
+automatically falls back to a direct V4L2 capture to keep the stream
+running.
 
 ## Requirements
 
