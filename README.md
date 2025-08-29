@@ -35,6 +35,16 @@ Arguments:
 
 Press **ESC** to close the preview window.
 
+### Web Interface
+
+To view the camera in a web browser run:
+
+```bash
+python usb_cam_web.py --device /dev/video0 --width 1280 --height 720 --framerate 30
+```
+
+Then open `http://<device-ip>:5000/` in a browser to see the live stream.
+
 ## Pipeline Overview
 
 The script constructs the following GStreamer pipeline:
